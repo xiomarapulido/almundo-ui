@@ -1,0 +1,26 @@
+body { 
+    padding-top: 50px; 
+}
+
+.color-frame{
+    background-color:#114082 ;
+}
+.color-background{
+    background-color: #f5f5f6;
+}
+
+.top{
+    margin-top:20px;
+}
+
+@media (max-width: 800px) and (max-height: 1024px) {
+    .color-background{
+        min-height: 970px !important;
+    }
+}
+
+@media (max-width: 500px) and (max-height: 800px) {
+    .color-background{
+        min-height: 550px !important;
+    }
+}
