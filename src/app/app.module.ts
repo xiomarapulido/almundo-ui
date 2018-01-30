@@ -7,6 +7,10 @@ import { HotelsComponent } from './components/hotels/hotels.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { BodyComponent } from './components/body/body.component';
+import { HotelsService } from './services/hotels.service';
+import { HttpClientModule } from '@angular/common/http';
+import { StarsRatingComponent } from './components/stars-rating/stars-rating.component';
+import { AmenitiesComponent } from './components/amenities/amenities.component';
 
 
 @NgModule({
@@ -15,12 +19,17 @@ import { BodyComponent } from './components/body/body.component';
     HotelsComponent,
     HeaderComponent,
     FiltersComponent,
-    BodyComponent
+    BodyComponent,
+    StarsRatingComponent,
+    AmenitiesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HotelsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 
  .top-general{
-    margin-top: 15px
+    margin-top: 15px;
 }
 
 .filters-general{
@@ -16,8 +16,6 @@
     font-size:20px;
 }
 
-
-
 .btn-filters {
     width: 100%;
 }
@@ -31,12 +29,6 @@
       display: none;
     }
 } 
-
-
-.top-filters {
-    padding-bottom: 15px;
-    cursor: pointer;
-}
 
 @media (max-width: 800px) and (max-height: 1024px) {
     .top-filters {

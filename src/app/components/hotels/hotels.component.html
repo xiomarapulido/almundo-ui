@@ -1,3 +1,44 @@
 <div class="row">
-  
+  <div class="col-md-12" *ngFor="let hotels of hotels">
+    <div class="card top">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div style="width: 100%; height: 222px;">
+            <img class="card-img-top img-fluid" style="padding:5px; height: 100%; width: 100% !important" src="../../assets/images/hotels/{{hotels.image}}"
+              [alt]="hotels.name">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="card-block" style="width: 100% !important;height: 180px;">
+            <h5 class="card-title color-text-title" style="font-size:23px;">{{hotels.name}}</h5>
+            <app-stars-rating [stars]="hotels.stars"></app-stars-rating>
+            <app-amenities [amenitie]="hotels.amenities" style="width:30px;height:30px"></app-amenities>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="card-footer text-muted" style="background-color: white;">
+            <div class="row justify-content-md-center">
+              <div class="col-12 text-center align-self-end">
+                <div class="row">
+                  <div class="col-12">
+                    <label class="text-description col-md-8">Precio por noche por habitación</label>
+                  </div>
+                  <div class="col-12">
+                    <label style=" color:#ce7d2b; font-size:20px;">ARS</label>
+                    <label style=" color:#e16800; font-size:27px; font-weight: bold">{{hotels.price}}</label>
+                  </div>
+                </div>
+                <button type="button" class="col-md-8 offset-md-2 button btn btn-outline btn-block col">
+                  <label style=" color:white; margin-top:1%; font-size:20px; "> Ver hotel</label>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
 </div>

@@ -6,11 +6,29 @@ body {
     background-color:#114082 ;
 }
 .color-background{
-    background-color: #f5f5f6;
+    background-color: #f4f5f4;
 }
 
 .top{
     margin-top:20px;
+}
+
+.color-text-title {
+    color: #1179b3;
+}
+.color-star {
+    color: #f4bf01;
+}
+
+.text-description{
+    padding:0px;
+    margin-bottom:0%;
+    font-size:15px;
+    font-weight: bold;
+}
+
+.button{
+    background-color:#002979 ;
 }
 
 @media (max-width: 800px) and (max-height: 1024px) {
