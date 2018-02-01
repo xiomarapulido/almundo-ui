@@ -1,0 +1,40 @@
+<div id="modal-view-more" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">  
+  <div class="modal-dialog modal-lg">
+    <div class="modal-container modal-content">
+      <div class="modal-header">
+        <h5 class="color-text-title" *ngIf="hotel">{{hotel.name}}</h5>
+        <h5>
+          <i class="fa fa-times color-text-title" aria-hidden="true" data-dismiss="modal"></i>
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <div class="div-img" *ngIf="hotel">
+              <img class="card-img-top img-fluid" style="padding:5px; height: 100%; width: 100% !important" src="../../assets/images/hotels/{{hotel.image}}"
+                [alt]="hotel.name">
+            </div>
+          </div>
+          <div class="row" *ngIf="hotel">
+            <app-stars-rating class="col-12" [stars]="hotel.stars"></app-stars-rating>
+            <app-amenities class="col-12 amenities" [amenitie]="hotel.amenities"></app-amenities>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            <h5 class="card-title">Precio por noche por habitación</h5>
+            <label class="ars-hotel">ARS</label>
+            <label class="price-hotel" *ngIf="hotel">{{hotel.price}}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="div-click-modal" data-toggle="modal" data-target="#modal-view-more" style="display:none">
+
+</div>

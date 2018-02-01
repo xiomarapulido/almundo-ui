@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  Hotels:  'http://localhost:3000/api/hotel'
+  hotels_api:  'http://localhost:3000/api'
 };

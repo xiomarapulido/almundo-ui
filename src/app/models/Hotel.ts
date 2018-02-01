@@ -1,7 +1,7 @@
 export interface Hotel {
     id: Number,
     name: String,
-    stars: Number,
+    stars: Array<Number>,
     price: Number,
     image: String,
     amenities: {}

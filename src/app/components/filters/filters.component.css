@@ -16,8 +16,24 @@
     font-size:20px;
 }
 
+.color-star-filter{
+    color:#1179b3
+}
+
 .btn-filters {
     width: 100%;
+}
+
+.description-filter{
+    color: #636c72;margin-left:5px
+}
+
+.card-color{
+    background-color: white;
+}
+
+.margin-card{
+    margin-top:5%
 }
 
 .hide-filter{

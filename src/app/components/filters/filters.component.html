@@ -5,35 +5,62 @@
   </button>
   <div id="FilterColapse" class="col-12 navbar-collapse collapse">
     <div class="row">
-
-
-      <div class="card top">
-        <div style="width: 100%;">
-          <h5 class="card-header">Filtros</h5>
-        </div>
-
-        <div class="card-body">
-          <div class="row justify-content-md-center">
-            <div class="col-12 text-center align-self-end">
-              <div class="row">
-                <div class="col-md6">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </div>
-                <div class="col-md6" style="float: lefth">
-                  <h5 class="card-title color-text-title" style="">Nombre del hotel</h5>
-                </div>
-              </div>
-              <input class="form-control" type="text" placeholder="Buscar producto">
-            </div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div class="row justify-content-md-center">
-            <div class="col-12 text-center align-self-end">
-              estrellas
-            </div>
-          </div>
-        </div>
+      <div class="col-1">
+      </div>
+      <div class="col-10">
+        <table class="top card-color">
+          <tr>
+            <h5 class="card-header card-color">Filtros</h5>
+          </tr>
+          <tr>
+            <h6 class="card-title color-text-title margin-left-filter margin-card">
+              <i class="fa fa-search" aria-hidden="true">
+              </i> Nombre del hotel</h6>
+            <input class="form-control" type="text" placeholder="Ingrese el nombre del hotel" [(ngModel)]="nameHotel" (ngModelChange)="filterHotels()" (keyup.enter)="filterHotels()"> 
+          </tr>
+          <tr>
+            <h6 class="card-title color-text-title margin-left-filter margin-card">
+              <span class="fa fa-star color-star-filte"></span>
+              Estrellas
+            </h6>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.all" (ngModelChange)="filterStarsHotels($event, [1,2,3,4,5])">
+              <label class="text-description description-filter">Todas las estrellas</label>
+            </p>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.five" (ngModelChange)="filterStarsHotels($event, 5)">
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+            </p>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.four" (ngModelChange)="filterStarsHotels($event, 4)">
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+            </p>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.three" (ngModelChange)="filterStarsHotels($event, 3)">
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+            </p>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.two" (ngModelChange)="filterStarsHotels($event, 2)">
+              <span class="fa fa-star color-star"></span>
+              <span class="fa fa-star color-star"></span>
+            </p>
+            <p class="margin-left-filter">
+              <input type="checkbox" [(ngModel)]="stars.one" (ngModelChange)="filterStarsHotels($event, 1)">
+              <span class="fa fa-star color-star"></span>
+            </p>
+          </tr>
+        </table>
+      </div>
+      <div class="col-1">
       </div>
     </div>
   </div>
